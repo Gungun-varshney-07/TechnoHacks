@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    char degree;
+    double temperature;
+    printf("Enter the degree of temperature(C/F): ");
+    scanf("%c", &degree);
+    printf("Enter the value of temperature to be converted: ");
+    scanf("%lf", &temperature);
+    if(degree == 'C' || degree == 'c'){
+        printf("%.1lf°C = %.1lf°F", temperature, (temperature*9/5)+32);
+    }
+    else if(degree == 'F' || degree == 'f'){
+        printf("%.1lf°F = %.1lf°C", temperature, (temperature-32)*5/9);
+    }
+    return 0;
+}
