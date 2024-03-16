@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    double a,b;
+    char op;
+    printf("Enter the operation you want to perform (+ - * /): ");
+    scanf("%c", &op);
+    printf("\nEnter two numbers: "); 
+    scanf("%lf %lf", &a, &b);
+    
+    switch(op){
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf", a, b, a+b);
+            break;
+        case '-':
+            printf("%.1lf - %.1lf = %.1lf", a, b, a-b);
+            break;
+        case '*':
+            printf("%.1lf * %.1lf = %.1lf", a, b, a*b);
+            break;
+        case '/':
+            printf("%.1lf / %.1lf = %.1lf", a, b, a/b);
+            break;
+        default:
+            printf("Invalid operation");
+    }
+    return 0;
+}
